@@ -1,0 +1,28 @@
+CAPI=2:
+
+name: AD:utility:ad_tcl_vivado_project:1.0.0
+description: Files to help generate vivado fpga projects using analog devices HDL tcl scripts
+
+filesets:
+  src:
+    files:
+    - adcfifo_bd.tcl : {file_type: tclSource}
+    - adi_board.tcl : {file_type: tclSource}
+    - adi_fir_filter_bd.tcl : {file_type: tclSource}
+    - adi_make_boot_bin.tcl : {file_type: tclSource}
+    - adi_make.tcl : {file_type: tclSource}
+    - adi_project_xilinx.tcl : {file_type: tclSource}
+    - adi_tquest.tcl : {file_type: tclSource}
+    - adi_xilinx_msg.tcl : {file_type: tclSource}
+    - dacfifo_bd.tcl : {file_type: tclSource}
+    - data_offload_bd.tcl : {file_type: tclSource}
+    - adi_fir_filter_constr.xdc : {file_type : xdc}
+
+
+  dep:
+    depend:
+      - AD:utility:ad_tcl_generic
+    
+targets:
+  default: &default
+    filesets: [src, dep]

@@ -1,0 +1,18 @@
+CAPI=2:
+
+name: AD:utility:ad_tcl_quartus_ip:1.0.0
+description: Files to help generate quartus fpga projects using analog devices HDL tcl scripts
+
+filesets:
+  src:
+    files:
+      - adi_intel_device_info_enc.tcl  : {file_type: tclSource}
+      - adi_ip_intel.tcl : {file_type: tclSource}
+
+  dep:
+    depend:
+      - AD:utility:ad_tcl_generic
+    
+targets:
+  default: &default
+    filesets: [src, dep]
