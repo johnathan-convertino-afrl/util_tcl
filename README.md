@@ -1,16 +1,27 @@
-# AFRL Util Helper Functions
-### Various reusable funtions for verilog
+# AFRL Util Tcl Functions
+### Various reusable funtions for tcl
 ---
 
    author: Jay Convertino   
    
-   date: 2022.08.10  
+   date: 2023.09.19
    
    details: Various helper funtions.   
    
    license: MIT   
    
 ---
+
+## THIS CONTAINS MY OWN TCL SCRIPTS AND ANALOG DEVICES SCRIPTS, ANALOG DEVICES LICENSES APPLY TO THEIR CODE.
+
+This is a work in progress, most analog devices stuff will probably not survive.
+
+### Version
+#### Current
+  - V0.0.1 - initial release
+
+#### Previous
+  - none
 
 ### IP USAGE
 #### INSTRUCTIONS
@@ -19,24 +30,8 @@
 ``` 
   dep:
     depend:
-      - AFRL:utility:helper:1.0.0
+      - AFRL:utility:tcl_version_check:1.0.0
 ```
-##### Verilog include the files needed in the module you are using the function in (see src below for list of files and funtions).
-```
-`include "util_helper_math.vh"
-```
-
-### COMPONENTS
-#### SRC
-
-* util_helper_math.vh ... functions written in C syntax for clarification.
-  * int clogb2(value) ... will return the log base 2 of the argument (value), rounded up to the nearest integer.
-  * int cmax(max1, max2) ... will return the number that is the max of the arguments max1, max2.
-  * int abs(value) ... will return the absolute value of a number.
-  
-#### TB
-
-* tb_helper.v
   
 ### fusesoc
 
@@ -47,4 +42,3 @@
 
 * RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
   - default (for IP integration builds)
-  - sim
