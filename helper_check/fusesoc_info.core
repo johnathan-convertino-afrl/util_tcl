@@ -1,0 +1,13 @@
+CAPI=2:
+
+name: AFRL:utility:tcl_helper_check:1.0.0
+description: Files to help check various FPGA software parameters.
+
+filesets:
+  src:
+    files:
+      - "tool_vivado ? (src/helper_vivado.tcl)" : { file_type : tclSource }
+    
+targets:
+  default: &default
+    filesets: [src]

@@ -6,7 +6,7 @@ description: Files to help generate check versions of FPGA software.
 filesets:
   src:
     files:
-      - "tool_vivado ? (vivado.tcl)" : { file_type : tclSource }
+      - "tool_vivado ? (src/version_vivado.tcl)" : { file_type : tclSource }
     
 targets:
   default: &default
