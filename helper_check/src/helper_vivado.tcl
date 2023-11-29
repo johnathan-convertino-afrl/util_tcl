@@ -12,7 +12,7 @@ proc vivado_hierarchy_check {requested_mode} {
 
 #check ip version by susing vlvn
 proc vivado_ip_vlvn_version_check {req_ip_version} {
-  set ip_version [get_ipdefs -quiet -vlnv $req_ip_version]
+  set ip_version [get_ipdefs -quiet -all -vlnv $req_ip_version]
 
   if {$ip_version eq ""} {
     puts "ERROR: Vivado IP version not found, expected $req_ip_version."
