@@ -12,8 +12,6 @@
    
 ---
 
-This is a work in progress, most analog devices stuff will probably not survive.
-
 ### Version
 #### Current
   - V0.0.1 - initial release
@@ -22,7 +20,13 @@ This is a work in progress, most analog devices stuff will probably not survive.
   - none
 
 ### IP USAGE
-#### INSTRUCTIONS
+#### Functions for Vivado
+  - hierarchy_check {requested_mode} : check if hierarchy of the Vivado base system matches whats required.
+    * Example: hierarchy_check "flat"
+  - ip_vlvn_version_check {req_ip_version} : check the ip version from the catalog matches the one requested.
+    * Example: ip_vlvn_version_check "xilinx.com:ip:processing_system7:5.5"
+  - version_check {req_vivado_version} : check the Vivado tool version against the one requested
+    * Example: version_check "2022.2.2"
 
 ##### Dependency include for fusesoc core file
 
