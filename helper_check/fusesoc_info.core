@@ -7,6 +7,7 @@ filesets:
   src:
     files:
       - "tool_vivado ? (src/helper_vivado.tcl)" : { file_type : tclSource }
+      - "tool_radiant ? (src/helper_radiant.tcl)" : { file_type : tclSource }
     
 targets:
   default: &default
