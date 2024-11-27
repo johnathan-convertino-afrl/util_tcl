@@ -1,5 +1,8 @@
 # AFRL Util Tcl Functions
 ### Various reusable funtions for tcl
+
+![image](img/AFRL.png)
+
 ---
 
    author: Jay Convertino   
@@ -27,6 +30,12 @@
     * Example: ip_vlvn_version_check "xilinx.com:ip:processing_system7:5.5"
   - version_check {req_vivado_version} : check the Vivado tool version against the one requested
     * Example: version_check "2022.2.2"
+
+#### Functions for Lattice Radiant
+  - ip_vlvn_version_check {req_ip_version} : check the ip version from the catalog matches the one requested.
+    * Example: ip_vlvn_version_check "lattice:ip:processing_system7:5.5"
+  - version_check {req_vivado_version} : check the Radiant tool version against the one requested
+    * Example: version_check "16.2.2"
 
 ##### Dependency include for fusesoc core file
 
